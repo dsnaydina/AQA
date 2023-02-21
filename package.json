@@ -1,0 +1,20 @@
+{
+  "name": "aqa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "npx cypress open",  
+    "cy:run": "npx cypress run ",
+    "cy:run:first": "npx cypress run --spec 'cypress/e2e/first.cy.js' ",
+    "cy:run:second": "npx cypress run --spec 'cypress/e2e/second.cy.js' ",
+    "cy:run:all": "npm run cy:run:first && npm run cy:run:second",
+    "cy:dash": "npx cypress run --record --key 7aea014b-33f0-456e-a363-be1eefc0fb8e"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.6.0",
+    "@faker-js/faker": "^7.6.0"
+  }
+}

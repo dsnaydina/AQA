@@ -1,0 +1,6 @@
+{
+    "emailField": "#email",
+    "nameField": "#name", 
+    "passwordField": "#password",
+    "submitButton": "#ipa-app > section > section > main > div > div.ant-row > div:nth-child(2) > form > div.content-bottom > div > div > div > div > div > button > span"
+} 
