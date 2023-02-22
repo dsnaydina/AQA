@@ -1,0 +1,5 @@
+{
+    "dropdownMenu": ".ant-btn-text",
+    "deleteGoalOption": ".ant-dropdown-menu-item",
+    "deleteButton": ".ant-modal-body > .ant-row > :nth-child(2) > .ant-btn > span"
+}
