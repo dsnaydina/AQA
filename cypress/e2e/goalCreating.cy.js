@@ -3,22 +3,13 @@ const createGoalPage = require("../fixtures/pages/createGoalPage.json");
 const goalDashboard = require("../fixtures/pages/goalDashboard.json");
 
 describe("Create a goal", () => {
-  //   it("User logs in", () => {
-  //     cy.visit("/signin");
-  //     cy.get(general.emailField).type("dsnaydina@gmail.com");
-  //     cy.get(general.passwordField).type("2211Vfvf");
-  //     cy.get(general.submitButton).click({ force: true });
-
-  //     cy.get(".ant-row > .ant-btn").click({ force: true });
-  //   });
-
-  it.only("User can  create a goal based on plan upgrade", () => {
-    //user logs in
+  before(() => {
     cy.login("dsnaydina@gmail.com", "2211Vfvf");
-    // cy.visit("/signin");
-    // cy.get(general.emailField).type("dsnaydina@gmail.com");
-    // cy.get(general.passwordField).type("2211Vfvf");
-    // cy.get(general.submitButton).click({ force: true });
+  });
+
+  it("User can  create a goal based on plan upgrade", () => {
+    //user logs in
+    //cy.login("dsnaydina@gmail.com", "2211Vfvf");
     //user creates a goal
     cy.get(general.createNewGoal).click({ force: true });
     cy.contains("What is your goal?").should("exist");
@@ -36,11 +27,6 @@ describe("Create a goal", () => {
     cy.contains("Are you sure you want to delete this goal?").should("exist");
     cy.get(goalDashboard.deleteButton).click({ force: true });
     cy.contains("No active goals").should("exist");
-
-    // no idea why logout is not working
-    //    cy.get('#ipa-app > section > aside > div > div > div.ant-col.ant-col-24.bottom-menu > ul > li.ant-menu-item.ant-menu-item-selected > span.ant-menu-title-content').click({force: true});
-    //    cy.get('#ipa-app > section > aside > div > div > div.ant-col.ant-col-24.bottom-menu > ul > li.ant-menu-item.ant-menu-item-selected > span.ant-menu-title-content').click({force: true});
-    //    cy.contains("Create your account").should("exist");
   });
 
   it("User can create a goal based on a click event", () => {
@@ -138,12 +124,8 @@ describe("Create a goal", () => {
   });
 
   // it('User can delete a goal', () => {
-  //     //cy.clearCookies();
-  //     cy.visit("/signin");
-  //     //cy.get(general.nameField).type("tester11");
-  //     cy.get(general.emailField).type("dsnaydina@gmail.com");
-  //     cy.get(general.passwordField).type("2211Vfvf");
-  //     cy.get(general.submitButton).click({force : true});
+  //     cy.clearCookies();
+  //     cy.login("dsnaydina@gmail.com", "2211Vfvf");
   //     cy.get('#ipa-app > section > section > main > div > div.container > div > div:nth-child(1) > div > div > button').click({force: true});
   //     cy.get('body > div:nth-child(3) > div > div > ul > li > span.ant-dropdown-menu-title-content').click({force: true});
   //     cy.contains("Are you sure you want to delete this goal?").should("exist");
