@@ -1,11 +1,16 @@
 {
-    "basedOnPlanUpgrade": ":nth-child(3) > .ant-card-body > .ant-row > .ant-radio-wrapper > .ant-radio > .ant-radio-input",
-    "basedOnClickEvent": "#ipa-app > section > section > main > div > div.ant-row.ant-row-center.ant-row-middle.container > div > div:nth-child(4) > div:nth-child(1) > div > div > div:nth-child(4) > div > div > label > span > input",
-    "basedOnUrlDestination": "#ipa-app > section > section > main > div > div.ant-row.ant-row-center.ant-row-middle.container > div > div:nth-child(4) > div:nth-child(1) > div > div > div:nth-child(5) > div > div",
-    "nextButton": ".ant-btn-primary",
-    "fromField": ".m-b-16 > .ant-select-selector > .ant-select-selection-overflow",
-    "toField": ".m-b-8 > .ant-select-selector > .ant-select-selection-overflow",
-    "saveNewGoalButton": "#ipa-app > section > section > main > div > div.ant-row.ant-row-center.ant-row-middle.container > div > div.bottom-nav > div > div:nth-child(2) > button.ant-btn.ant-btn-primary.ant-btn-lg > span",
-    "event": ":nth-child(2) > .ant-radio > .ant-radio-input",
-    "url": "#ipa-app > section > section > main > div > div.ant-row.ant-row-center.ant-row-middle.container > div > div.ant-card.ant-card-bordered.m-b-5 > div > div > div > span.ant-input-group-wrapper.m-b-8.m-t-16.ant-input-group-wrapper-lg > span > input"
+  "basedOnPlanUpgrade": ":nth-child(3) > .ant-card-body > .ant-row > .ant-radio-wrapper > .ant-radio > .ant-radio-input",
+  "basedOnClickEvent": "#ipa-app > section > section > main > div > div.ant-row.ant-row-center.ant-row-middle.container > div > div:nth-child(4) > div:nth-child(1) > div > div > div:nth-child(4) > div > div > label > span > input",
+  "basedOnUrlDestination": "#ipa-app > section > section > main > div > div.ant-row.ant-row-center.ant-row-middle.container > div > div:nth-child(4) > div:nth-child(1) > div > div > div:nth-child(5) > div > div",
+  "basedOnCustomersScore": ".m-l-5 > :nth-child(1) > :nth-child(4) > .ant-card-body > .ant-row",
+  "basedOnPlanRenewal": ".m-l-5 > :nth-child(1) > :nth-child(5) > .ant-card-body > .ant-row",
+  "nextButton": ".ant-btn-primary",
+  "fromField": ".m-b-16 > .ant-select-selector > .ant-select-selection-overflow",
+  "fromHealthField": "#ipa-app > section > section > main > div > div.ant-row.ant-row-center.ant-row-middle.container > div > div.ant-card.ant-card-bordered.m-b-5 > div > div:nth-child(2) > div > label:nth-child(1) > span.ant-checkbox > input",
+  "toHealthField": "#ipa-app > section > section > main > div > div.ant-row.ant-row-center.ant-row-middle.container > div > div.ant-card.ant-card-bordered.m-b-5 > div > div:nth-child(4) > div > label:nth-child(3) > span.ant-checkbox > input",
+  "toField": ".m-b-8 > .ant-select-selector > .ant-select-selection-overflow",
+  "saveNewGoalButton": "#ipa-app > section > section > main > div > div.ant-row.ant-row-center.ant-row-middle.container > div > div.bottom-nav > div > div:nth-child(2) > button.ant-btn.ant-btn-primary.ant-btn-lg > span",
+  "event": ":nth-child(2) > .ant-radio > .ant-radio-input",
+  "url": "#ipa-app > section > section > main > div > div.ant-row.ant-row-center.ant-row-middle.container > div > div.ant-card.ant-card-bordered.m-b-5 > div > div > div > span.ant-input-group-wrapper.m-b-8.m-t-16.ant-input-group-wrapper-lg > span > input",
+  "planNameField": ".ant-select-selection-overflow"
 }
