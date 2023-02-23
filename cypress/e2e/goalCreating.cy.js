@@ -12,12 +12,13 @@ describe("Create a goal", () => {
   //     cy.get(".ant-row > .ant-btn").click({ force: true });
   //   });
 
-  it("User can  create a goal based on plan upgrade", () => {
+  it.only("User can  create a goal based on plan upgrade", () => {
     //user logs in
-    cy.visit("/signin");
-    cy.get(general.emailField).type("dsnaydina@gmail.com");
-    cy.get(general.passwordField).type("2211Vfvf");
-    cy.get(general.submitButton).click({ force: true });
+    cy.login("dsnaydina@gmail.com", "2211Vfvf");
+    // cy.visit("/signin");
+    // cy.get(general.emailField).type("dsnaydina@gmail.com");
+    // cy.get(general.passwordField).type("2211Vfvf");
+    // cy.get(general.submitButton).click({ force: true });
     //user creates a goal
     cy.get(general.createNewGoal).click({ force: true });
     cy.contains("What is your goal?").should("exist");
