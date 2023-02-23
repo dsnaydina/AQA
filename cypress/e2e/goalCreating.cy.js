@@ -2,14 +2,12 @@ const general = require("../fixtures/pages/general.json");
 const createGoalPage = require("../fixtures/pages/createGoalPage.json");
 const goalDashboard = require("../fixtures/pages/goalDashboard.json");
 
-describe("Create a goal", () => {
+describe("User can create and delete a goal", () => {
   before(() => {
     cy.login("dsnaydina@gmail.com", "2211Vfvf");
   });
 
   it("User can  create a goal based on plan upgrade", () => {
-    //user logs in
-    //cy.login("dsnaydina@gmail.com", "2211Vfvf");
     //user creates a goal
     cy.get(general.createNewGoal).click({ force: true });
     cy.contains("What is your goal?").should("exist");
@@ -30,11 +28,6 @@ describe("Create a goal", () => {
   });
 
   it("User can create a goal based on a click event", () => {
-    // cy.visit("/signin");
-    // //cy.get(general.nameField).type("tester11");
-    // cy.get(general.emailField).type("dsnaydina@gmail.com");
-    // cy.get(general.passwordField).type("2211Vfvf");
-    // cy.get(general.submitButton).click({force : true});
     cy.get(general.createNewGoal).click({ force: true });
     cy.contains("What is your goal?").should("exist");
     cy.get(createGoalPage.basedOnClickEvent).click({ force: true });
@@ -52,10 +45,6 @@ describe("Create a goal", () => {
   });
 
   it("User can create a goal based url destination", () => {
-    // cy.visit("/signin");
-    // cy.get(general.emailField).type("dsnaydina@gmail.com");
-    // cy.get(general.passwordField).type("2211Vfvf");
-    // cy.get(general.submitButton).click({force : true});
     cy.get(general.createNewGoal).click({ force: true });
     cy.contains("What is your goal?").should("exist");
     cy.get(createGoalPage.basedOnUrlDestination).click({ force: true });
@@ -75,10 +64,6 @@ describe("Create a goal", () => {
   });
 
   it("User can create a retention goal based on a customer’s health score", () => {
-    // cy.visit("/signin");
-    // cy.get(general.emailField).type("dsnaydina@gmail.com");
-    // cy.get(general.passwordField).type("2211Vfvf");
-    // cy.get(general.submitButton).click({ force: true });
     cy.get(general.createNewGoal).click({ force: true });
     cy.contains("What is your goal?").should("exist");
     cy.get(createGoalPage.basedOnCustomersScore).click({ force: true });
@@ -99,10 +84,6 @@ describe("Create a goal", () => {
   });
 
   it("User can create a retention goal based on a plan renewal", () => {
-    // cy.visit("/signin");
-    // cy.get(general.emailField).type("dsnaydina@gmail.com");
-    // cy.get(general.passwordField).type("2211Vfvf");
-    // cy.get(general.submitButton).click({ force: true });
     cy.get(general.createNewGoal).click({ force: true }).wait(4000);
     cy.contains("What is your goal?").should("exist");
     cy.get(createGoalPage.basedOnPlanRenewal).click({ force: true });
