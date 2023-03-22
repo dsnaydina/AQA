@@ -1,0 +1,8 @@
+{
+  "userActionTab": "#ipa-app > section > aside > div > div > div.ant-col.ant-col-24.m-t-32 > ul > li:nth-child(2) > span.ant-menu-title-content",
+  "editButton": ".ant-list-item-action > :nth-child(2)",
+  "nameInput": ".ant-input",
+  "saveButton": ":nth-child(2) > .ant-btn > span",
+  "userActionItem": ".item-icon",
+  "segmentsDropdown": ".ant-dropdown-trigger"
+}

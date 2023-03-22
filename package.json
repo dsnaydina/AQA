@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cy:open": "npx cypress open",  
+    "cy:open": "npx cypress open",
     "cy:run": "npx cypress run ",
     "cy:run:first": "npx cypress run --spec 'cypress/e2e/first.cy.js' ",
     "cy:run:second": "npx cypress run --spec 'cypress/e2e/second.cy.js' ",
@@ -14,7 +14,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
     "cypress": "^12.6.0",
-    "@faker-js/faker": "^7.6.0"
+    "cypress-iframe": "^1.0.1"
   }
 }
