@@ -15,7 +15,7 @@ describe("Unsuccessful registration - invalid user name ", () => {
     cy.get("#email").type(userWithEmptyName.email);
     cy.get("#password").type(userWithEmptyName.password);
     cy.get('button[type="submit"]').click();
-    cy.contains("Create your accoubt").should("be.visible");
+    cy.contains("Create your account").should("be.visible");
     cy.log("Registration with invalid name failed");
   });
 
@@ -28,7 +28,7 @@ describe("Unsuccessful registration - invalid user name ", () => {
 
     cy.visit("/signup");
     cy.registerUser(userData);
-    cy.contains("Create your user").should("be.visible");
+    cy.contains("Create your account").should("be.visible");
     cy.log("Registration with invalid name failed");
   });
 
@@ -109,7 +109,44 @@ describe("Unsuccessful registration - invalid email", () => {
     cy.get("#name").type(userData.userName);
     cy.get("#password").type(userData.password);
     cy.get('button[type="submit"]').click();
-    cy.contains("Create your accoubt").should("be.visible");
+    cy.contains("Create your account").should("be.visible");
+    cy.log("Registration with invalid email failed");
+  });
+
+  it("email with invalid characters", () => {
+    const userData = {
+      userName: faker.internet.userName(),
+      email: "test#example.com",
+      password: faker.internet.password(),
+    };
+
+    cy.visit("/signup");
+    cy.registerUser(userData);
+    cy.contains("Create your account").should("be.visible");
+    cy.log("Registration with invalid email failed");
+  });
+
+  it("email with a missing domain", () => {
+    const userData = {
+      userName: faker.internet.userName(),
+      email: "test@example",
+      password: faker.internet.password(),
+    };
+
+    cy.visit("/signup");
+    cy.registerUser(userData);
+    cy.contains("The email address is badly formatted.").should("be.visible");
+    cy.log("Registration with invalid email failed");
+  });
+
+  it("email with missing username", () => {
+    const userData = {
+      userName: faker.internet.userName(),
+      email: "@example.com",
+      password: faker.internet.password(),
+    };
+    cy.registerUser(userData);
+    cy.contains("Create your account").should("be.visible");
     cy.log("Registration with invalid email failed");
   });
 });
