@@ -1,11 +1,14 @@
-const general = require("../fixtures/pages/general.json");
-const createGoalPage = require("../fixtures/pages/createGoalPage.json");
-const goalDashboard = require("../fixtures/pages/goalDashboard.json");
-const userAction = require("../fixtures/pages/userAction.json");
+const general = require("../../fixtures/pages/general.json");
+const createGoalPage = require("../../fixtures/pages/createGoalPage.json");
+const goalDashboard = require("../../fixtures/pages/goalDashboard.json");
+const userAction = require("../../fixtures/pages/userAction.json");
 
 describe("User can edit and delete a user action", () => {
   it("User can edit a user action name ", () => {
-    cy.login("iwish4amd@picsviral.net", "2211Vfvf");
+    //cy.login1("iwish4amd@picsviral.net", "2211Vfvf");
+
+    cy.visit("/login");
+    cy.login(userData);
     cy.get(userAction.userActionTab).click();
     cy.contains("Create new action").should("be.visible");
     cy.get(userAction.editButton).click();

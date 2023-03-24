@@ -1,5 +1,5 @@
 {
-    "dropdownMenu": ".ant-btn-text",
-    "deleteGoalOption": ".ant-dropdown-menu-item",
-    "deleteButton": ".ant-modal-body > .ant-row > :nth-child(2) > .ant-btn > span"
+  "dropdownMenu": "#ipa-app > section > section > main > div > div.ant-row.ant-row-middle.nav > div > button > span > svg",
+  "deleteGoalOption": ".ant-dropdown-menu-item",
+  "deleteButton": ".ant-modal-body > .ant-row > :nth-child(2) > .ant-btn > span"
 }

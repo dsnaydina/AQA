@@ -1,4 +1,5 @@
 {
+  "nameInput": "#name",
   "emailField": "#email",
   "nameField": "#name",
   "passwordField": "#password",
