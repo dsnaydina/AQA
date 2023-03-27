@@ -56,6 +56,19 @@ describe("User successful login", () => {
     cy.log(`Login with empty email field failed`);
   });
 
+  it("non-existing email", () => {
+    const email = "iwishd@picsviral.net";
+    const password = "2211Vfvf";
+    cy.visit("/signin");
+    cy.get(general.emailField).type(email);
+    cy.get(general.passwordField).type(password);
+    cy.get(general.submitButton).click();
+    cy.contains(
+      "The password is invalid or the user does not have a password."
+    ).should("be.visible");
+    cy.log(`Login with empty email field failed`);
+  });
+
   //email is not case sensitive - is it ok?
   //   it("email case sensitive", () => {
   //     const email = "IWISH4amd@picsviral.NET";
