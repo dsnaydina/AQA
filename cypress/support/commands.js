@@ -1,6 +1,6 @@
 const general = require("../fixtures/pages/general.json");
 const creds = require("../fixtures/creds.json");
-
+require("cypress-iframe");
 import { faker } from "@faker-js/faker";
 
 Cypress.Commands.add("registerUser", (userData) => {
