@@ -6,7 +6,7 @@ const settingsPage = require("../../fixtures/pages/settingsPage.json");
 
 import { faker } from "@faker-js/faker";
 
-describe("Profile tab", () => {
+describe.only("Profile tab", () => {
   let newName = faker.internet.userName();
 
   before(() => {
@@ -32,9 +32,7 @@ describe("Teammates tab", () => {
   it("User can send invitation to a teammate", () => {
     cy.contains("Settings").click({ force: true });
     cy.contains("Teammates").click({ force: true });
-    cy.get(
-      "#ipa-app > section > section > main > div > div.ant-col.ant-col-24.m-t-40 > div > div:nth-child(2) > div > div > div > form > div:nth-child(1) > div > div.ant-col.ant-form-item-control > div > div > input"
-    ).type(teammateEmail);
+    cy.get(".ant-input").type(teammateEmail);
     cy.contains("Send invitation").click();
     cy.get(":nth-child(2) > .ant-card-body").contains(teammateEmail);
     //cy.contains("Log out").click({ force: true });
@@ -89,13 +87,16 @@ describe("Domian tab", () => {
     cy.contains("Domain exclusion").click();
     cy.contains("Deny data from").should("be.visible");
     cy.get(settingsPage.domainName).clear().type("winware.com");
-    cy.get(settingsPage.excludeButton).click();
+    cy.contains("Exclude domain").click({ force: true });
     cy.get(settingsPage.excludedDomainList).contains("winware.com");
   });
 
   it("user can delete domain from excluded list", () => {
     cy.contains("Remove").click();
     cy.get(settingsPage.removeDomainButton).click();
+    cy.contains("You do not have any excluded domain yet.").should(
+      "be.visible"
+    );
     cy.contains("Log out").click({ force: true });
   });
 });

@@ -1,8 +1,8 @@
 {
   "userName": "#ipa-app > section > section > main > div > div.ant-col.ant-col-24.m-t-40 > div > div:nth-child(1) > div > div:nth-child(2) > form > div:nth-child(1) > div > div.ant-col.ant-form-item-control > div > div",
-  "updateButton": "#ipa-app > section > section > main > div > div.ant-col.ant-col-24.m-t-40 > div > div:nth-child(1) > div > div:nth-child(2) > form > button > span",
+  "updateButton": ":nth-child(1) > .ant-card-body > :nth-child(2) > .ant-form > .ant-btn > span",
   "domainName": "#domain",
-  "excludeButton": "#ipa-app > section > section > main > div > div.ant-col.ant-col-24.m-t-40 > div > div:nth-child(2) > div > div:nth-child(2) > div > form > div:nth-child(2) > div > div > div > div > button",
-  "excludedDomainList": ".m-t-24 > .ant-card-body",
+  "excludeButton": "#ipa-application > section > section > main > div > div.ant-col.ant-col-24.m-t-40 > div > div:nth-child(2) > div > div:nth-child(2) > div > form > div:nth-child(2) > div > div > div > div > button > span",
+  "excludedDomainList": ".ant-form-item-control-input-content > .ant-btn",
   "removeDomainButton": ".ant-row > :nth-child(2) > .ant-btn"
 }

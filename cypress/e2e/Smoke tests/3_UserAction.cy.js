@@ -10,7 +10,7 @@ describe("User can edit and delete a user action", () => {
     cy.visit("/login");
     cy.login(userData);
     cy.get(userAction.userActionTab).click();
-    cy.contains("Create new action").should("be.visible");
+    cy.contains("Create Business objective").should("be.visible");
     cy.get(userAction.editButton).click();
     cy.contains("Name").should("be.visible");
     cy.get(userAction.nameInput).clear().type("New name");

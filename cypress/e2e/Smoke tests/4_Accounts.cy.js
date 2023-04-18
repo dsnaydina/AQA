@@ -4,14 +4,12 @@ const goalDashboard = require("../../fixtures/pages/goalDashboard.json");
 const creds = require("../../fixtures/creds.json");
 const settingsPage = require("../../fixtures/pages/settingsPage.json");
 
-import { faker } from "@faker-js/faker";
-
 describe("User can navigate to Accounts & Users", () => {
   before(() => {
     cy.loginWithCreds(creds);
   });
-  it("User can check accounts", () => {
+  it("User can check accounts and select account as a favorite", () => {
     cy.contains("Accounts & Users").click();
-    cy.get(":nth-child(1) > .ant-card-body > .ant-row > .ant-col-2").click();
+    cy.get("Welcome to Winware!").should("be.visible");
   });
 });

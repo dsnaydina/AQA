@@ -7,7 +7,7 @@ describe("User successful registration and login", () => {
   beforeEach(() => {
     userData = {
       userName: faker.internet.userName(),
-      email: faker.internet.email().replace(/@/, "+test@"),
+      email: faker.internet.email().replace(/@/, "+test@o"),
       password: faker.internet.password(),
     };
     cy.visit("/signup");

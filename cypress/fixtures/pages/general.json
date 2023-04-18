@@ -3,7 +3,7 @@
   "emailField": "#email",
   "nameField": "#name",
   "passwordField": "#password",
-  "submitButton": "#ipa-app > section > section > main > div > div.ant-row > div:nth-child(2) > form > div.content-bottom > div > div > div > div > div > button > span",
+  "submitButton": "#ipa-application > section > section > main > div > div.ant-row > div:nth-child(2) > form > div.content-bottom > div > div > div > div > div > button",
   "createNewGoal": ".ant-row > .ant-btn > span",
   "logOut": "#ipa-app > section > aside > div > div > div.ant-col.ant-col-24.bottom-menu > ul > li:nth-child(2)",
   "settings": "#ipa-app > section > aside > div > div > div.ant-col.ant-col-24.bottom-menu > ul > li.ant-menu-item.ant-menu-item-selected > span.ant-menu-title-content > a"
